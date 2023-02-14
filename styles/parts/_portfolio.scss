@@ -135,6 +135,14 @@
                     justify-content: center;
                     align-items: center;
 
+                    &:hover {
+                        background: linear-gradient(87.32deg, #d39700 4.47%, #d39700 95.53%);
+                    }
+        
+                    &:active {
+                        background: linear-gradient(87.32deg, #bd8700 4.47%, #bd8700 95.53%);
+                    }
+
                     @media (max-width: 760px) {
                         width: 42px;
                         height: 42px;
@@ -153,6 +161,14 @@
                     img {
                         transform: rotate(180deg);
 
+                    }
+
+                    &:hover {
+                        background: linear-gradient(87.32deg, #d39700 4.47%, #d39700 95.53%);
+                    }
+        
+                    &:active {
+                        background: linear-gradient(87.32deg, #bd8700 4.47%, #bd8700 95.53%);
                     }
 
                     @media (max-width: 760px) {

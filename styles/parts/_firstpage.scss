@@ -104,7 +104,21 @@
 
             @media (max-width: 1280px) {
                 display: block;
+                width: 38px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover
+
+                }
+
+                &:active {
+                    opacity: 75%
+                }
             }
+
+            
 
         }
     }
