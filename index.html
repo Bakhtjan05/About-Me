@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div id="skrollTopButton">
+        <img src="./assets/icons/akar-icons_arrow-left.png" alt="">
+    </div>
     <section class="firstpage" id="firstpage">
         <header>
             <div class="title">
@@ -29,7 +32,7 @@
                     <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
-            <div class="menu">
+            <div class="menu" id="menu" onclick="openSidebar()" >
                 <img src="./assets/icons/icons8-menu-rounded-50.png" alt="">
             </div>
         </header>
@@ -39,7 +42,7 @@
                 <h2>HELLO</h2>
                 <h1>I'M BAKHTJAN IBRAGIMOV</h1>
                 <p>FRONTEND-DEVELOPER</p>
-                <button>CONTACT ME</button>
+                <a href="#footer">CONTACT ME</a>
             </div>
             <div class="right-side">
                 <div class="ellipse">
@@ -50,6 +53,16 @@
 
             </div>
         </main>
+        <div class="sidebar" id="sidebar">
+            <div onclick="closeSidebar()">
+                <img src="./assets/icons/icons8-close-window-50 (1).png" alt="">
+            </div>
+            <p>Links</p>
+            <a id="home" href="#firstpage" onclick="closeSidebar()">Home</a>
+            <a id="aboutMe" href="#box" onclick="closeSidebar()">About Me</a>
+            <a id="portfolioLink" href="#portfolio" onclick="closeSidebar()">Portfolio</a>
+            <a id="contact" href="#footer" onclick="closeSidebar()">Contact</a>
+        </div>
     </section>
     <section class="aboutMe" id="aboutMe">
         <div class="skills">
@@ -186,6 +199,8 @@
         </div>
 
     </footer>
+
+    <script src="./index.js"></script>
 
 </body>
 

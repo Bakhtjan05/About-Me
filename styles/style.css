@@ -49,10 +49,57 @@ li {
   list-style: none;
 }
 
+#skrollTopButton {
+  position: fixed;
+  right: 32px;
+  bottom: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1280px) {
+  #skrollTopButton {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+@media (max-width: 550px) {
+  #skrollTopButton {
+    width: 42px;
+    height: 42px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+#skrollTopButton.active {
+  opacity: 1;
+}
+
+#menu {
+  cursor: pointer;
+}
+
 .firstpage {
   width: 100%;
   height: 100vh;
   background-color: #1F1F1F;
+}
+@media (max-width: 1280px) {
+  .firstpage {
+    position: relative;
+  }
 }
 .firstpage header {
   display: flex;
@@ -329,7 +376,7 @@ li {
   font-weight: 300;
   line-height: 42px;
   color: #E4E4E4;
-  margin: 12px 0px 22px 0px;
+  margin: 12px 0px 32px 0px;
 }
 @media (max-width: 1440px) {
   .firstpage main .left-side p {
@@ -343,7 +390,7 @@ li {
     font-size: 34px;
     font-weight: 300;
     line-height: 42px;
-    margin: 12px 0px 30px 0px;
+    margin: 12px 0px 36px 0px;
   }
 }
 @media (max-width: 700px) {
@@ -351,7 +398,7 @@ li {
     font-size: 32px;
     font-weight: 300;
     line-height: 36px;
-    margin: 12px 0px 30px 0px;
+    margin: 12px 0px 36px 0px;
   }
 }
 @media (max-width: 540px) {
@@ -359,22 +406,23 @@ li {
     font-size: 26px;
     font-weight: 300;
     line-height: 30px;
-    margin: 12px 0px 30px 0px;
+    margin: 12px 0px 36px 0px;
   }
 }
-.firstpage main .left-side button {
+.firstpage main .left-side a {
   font-family: "NEXT ART Bold";
   padding: 14px 38px 14px 41px;
   background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
   box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
   border-radius: 6px;
   border: none;
+  color: black;
 }
-.firstpage main .left-side button:hover {
+.firstpage main .left-side a:hover {
   background: linear-gradient(87.32deg, #ca9100 4.47%, #ca9100 95.53%);
   box-shadow: 0px 4px 18px rgba(226, 158, 0, 0.573);
 }
-.firstpage main .left-side button:active {
+.firstpage main .left-side a:active {
   background: linear-gradient(87.32deg, #b88400 4.47%, #b88400 95.53%);
   box-shadow: 0px 4px 18px rgba(226, 158, 0, 0.573);
 }
@@ -411,6 +459,88 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
   text-align: center;
+}
+.firstpage .sidebar {
+  width: 30%;
+  height: 100%;
+  padding: 96px 24px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+@media (min-width: 1280px) {
+  .firstpage .sidebar {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .firstpage .sidebar {
+    padding: 96px 12px;
+    width: 40%;
+  }
+}
+.firstpage .sidebar p {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) {
+  .firstpage .sidebar p {
+    font-size: 36px;
+  }
+}
+@media (max-width: 380px) {
+  .firstpage .sidebar p {
+    font-size: 28px;
+  }
+}
+.firstpage .sidebar a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 32px;
+  background-color: rgba(169, 169, 169, 0.745);
+  border-radius: 12px;
+}
+@media (max-width: 900px) {
+  .firstpage .sidebar a {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .firstpage .sidebar a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+.firstpage .sidebar a:active {
+  background-color: rgba(169, 169, 169, 0.581);
+}
+.firstpage .sidebar div {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 28px;
+  top: 32px;
+  cursor: pointer;
+}
+.firstpage .sidebar div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 550px) {
+  .firstpage .sidebar div {
+    width: 38px;
+    height: 38px;
+    right: 16px;
+    bottom: 16px;
+  }
 }
 
 .aboutMe {
