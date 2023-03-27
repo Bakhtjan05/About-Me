@@ -105,11 +105,21 @@
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 21px;
+                margin-bottom: 12px;
             }
 
             @media (max-width: 1280px) {
                 width: 100%;
                 height: 40%;
+            }
+
+            a {
+                color: #E2A300;
+
+                &:hover {
+                    color: #e2a200d0;
+
+                }
             }
 
         }

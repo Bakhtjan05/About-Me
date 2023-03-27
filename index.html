@@ -149,8 +149,8 @@
     <section class="portfolio" id="portfolio">
         <h3>PORTFOLIO</h3>
         <div class="slides">
-            <div class="portfolio-img">
-                <img src="./assets/images/portfolio-1.png" alt="">
+            <div class="portfolio-img" >
+                <img src="./assets/images/portfolio-1.png" alt="" id="portfolio-img">
             </div>
 
             <div class="left-and-right-adaptive">
@@ -163,7 +163,7 @@
             </div>
 
             <div class="portfolio-description">
-                <p class="title">Landing Foodieland</p>
+                <p class="title" id="title">Landing Foodieland</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut
                     sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis
                     eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam
@@ -171,13 +171,13 @@
                     tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu
                     gravida vel.
                 </p>
-                <a href="#">More</a>
+                <a href="https://foodieland-portfolio.netlify.app/" target="_blank" id="link">More</a>
             </div>
 
-            <div class="right-side">
+            <div class="right-side" onclick="toRight()" id="rightSide">
                 <img src="./assets/icons/akar-icons_arrow-left.png" alt="">
             </div>
-            <div class="left-side">
+            <div class="left-side" onclick="toLeft()" id="leftSide">
                 <img src="./assets/icons/akar-icons_arrow-left.png" alt="">
             </div>
         </div>
